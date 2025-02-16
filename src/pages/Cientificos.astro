@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<header class="bg-green-700 text-white py-4 text-center">
+		<h1 class="text-4xl font-bold">WikiAnimal</h1>
+	</header>
+
+	<nav class="bg-green-600 p-4 text-white">
+		<ul class="flex justify-center gap-4">
+			<li><a href="/" class="hover:underline">Inicio</a></li>
+			<li><a href="/Prehistoria" class="hover:underline">Animales Prehistoricos</a></li>
+		</ul>
+	</nav>
+
+	<main class=" flex-grow grid grid-cols-2 gap-4 max-w-4xl mx-auto my-8 p-4">
+		<article class="p-4 bg-gray-100 rounded-lg shadow ">
+			<h2 class="text-2xl font-semibold">🦖 Mary Anning (1799-1847) <br />Descubridora de fósiles clave</h2>
+			<p>
+				Fue una paleontóloga y coleccionista de fósiles británica, aunque sin reconocimiento oficial en su tiempo Su trabajo ayudó a comprender la extinción y la evolución de especies prehistóricas, influyendo en teorías como las de Darwin.
+			</p>
+		</article>
+
+		<article class="p-4 bg-gray-100 rounded-lg shadow">
+			<h2 class="text-2xl font-semibold">🐒 Charles Darwin (1809-1882) <br />Teoría de la Evolución</h2>
+			<p>
+				Fue un naturalista británico que desarrolló la teoría de la evolución por selección natural n su libro "El origen de las especies" (1859), explicó cómo los organismos evolucionan y se adaptan a su entorno con el tiempo.
+			</p>
+		</article>
+
+		<article class="p-4 bg-gray-100 rounded-lg shadow">
+			<h2 class="text-2xl font-semibold">🧬 Gregor Mendel (1822-1884) <br />Padre de la Genética</h2>
+			<p>
+                Fue un monje y científico austríaco que experimentó con guisantes y descubrió las leyes de la herencia Sus experimentos pasaron desapercibidos hasta el siglo XX, cuando fueron reconocidos como la base de la genética moderna.
+			</p>
+		</article>
+
+		<article class="p-4 bg-gray-100 rounded-lg shadow ">
+			<h2 class="text-2xl font-semibold">🌋James Hutton (1726-1797) <br />Padre de la Geología Moderna</h2>
+			<p>
+				Fue un geólogo escocés que propuso la teoría del uniformismo, que sostiene que los procesos geológicos actuales han ocurrido de la misma manera en el pasado Su obra "Teoría de la Tierra" sentó las bases de la geología moderna.
+			</p>
+		</article>
+	</main>
+
+	<footer class="bg-gray-800 text-white text-center py-4">
+		<p>© 2025 Este es un proyecto educativo usando librerías de uso público.</p>
+	</footer>
+</Layout>
