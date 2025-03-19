@@ -7,39 +7,48 @@ import Layout from "../layouts/Layout.astro";
 		<h1 class="text-4xl font-bold">WikiAnimal</h1>
 	</header>
 
-	<nav class="bg-green-600 p-4 text-white">
-		<ul class="flex justify-center gap-4">
-			<li><a href="/Cientificos" class="hover:underline">Cientificos</a></li>
-			<li><a href="/Prehistoria" class="hover:underline">Animales Prehistoricos</a></li>
-		</ul>
-	</nav>
-
 	<main class=" flex-grow grid grid-cols-2 gap-4 max-w-4xl mx-auto my-8 p-4">
 		<article class="p-4 bg-gray-100 rounded-lg shadow ">
-			<h2 class="text-2xl font-semibold">Principales Exponentes</h2>
+			<a href="/Cientificos">
+				<h2 class="text-2xl font-semibold">Principales Exponentes</h2>
+			</a>
 			<p>
-				En este artículo se retrata a los principales exponentes del campo de la biología que nos permiten entender en la actualidad cómo funciona nuestro mundo y sus aportes.
+				Biografías breves de científicos como Charles Darwin, Carl Linnaeus, Richard Owen, Mary Anning, entre otros.
+				<br>Sus aportes clave a la biología y paleontología.
+				<br>Impacto de sus descubrimientos en la actualidad.
 			</p>
 		</article>
 
 		<article class="p-4 bg-gray-100 rounded-lg shadow">
-			<h2 class="text-2xl font-semibold">Épocas Geológicas</h2>
+			<a href="/Geologicas">
+				<h2 class="text-2xl font-semibold">Edades Geológicas</h2>
+			</a>
 			<p>
-				Indagaremos en las distintas épocas geológicas que conocemos como humanos.
+				Descripción de cada era geológica: Precámbrico, Paleozoico, Mesozoico, Cenozoico.
+				<br>Principales eventos de cada era (extinciones masivas, evolución de especies).
+				<br>Gráficos o ilustraciones con líneas de tiempo.
 			</p>
 		</article>
 
 		<article class="p-4 bg-gray-100 rounded-lg shadow">
-			<h2 class="text-2xl font-semibold">Animales Modernos</h2>
+			<a href="/Animales">
+				<h2 class="text-2xl font-semibold">Animales</h2>
+			</a>
 			<p>
-				Hablaremos de algunas especies modernas.
+				Comparación entre especies modernas y sus ancestros prehistóricos.
+				<br>nformación sobre evolución y adaptación.
+				<br>Datos curiosos sobre especies actuales.
 			</p>
 		</article>
 
 		<article class="p-4 bg-gray-100 rounded-lg shadow ">
-			<h2 class="text-2xl font-semibold">Animales del Pasado</h2>
+			<a href="/Prehistoria">
+				<h2 class="text-2xl font-semibold">Animales Prehistoricos</h2>
+			</a>
 			<p>
-				Hablaremos desde los ictiosaurios más grandes hasta los dinosaurios más pequeños.
+				Detalle de grupos de animales prehistóricos: dinosaurios, mamíferos prehistóricos, invertebrados extintos.
+				<br>Relación de estos animales con sus descendientes modernos.
+				<br>Imágenes o reconstrucciones de fósiles.
 			</p>
 		</article>
 	</main>
