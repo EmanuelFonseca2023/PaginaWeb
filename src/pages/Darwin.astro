@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import imagen from '../Imagenes/Darwin.jpg';
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <header class="bg-green-700 text-white py-4 text-center">
+        <h1 class="text-3xl font-bold">WikiAnimal</h1>
+    </header>
+
+    <nav class="bg-green-600 p-4 text-white">
+        <ul class="flex justify-center gap-4">
+            <li><a href="/" class="hover:underline text-lg hover:text-black transition-colors">Inicio</a></li> 
+            <li><a href="/Prehistoria" class="hover:underline text-lg hover:text-black transition-colors">Animales Prehistoricos</a></li>
+            <li><a href="/Cientificos" class="hover:underline text-lg hover:text-black transition-colors">Cientificos</a></li>
+        </ul>
+    </nav>
+    <main class="flex-grow text-xl mx-auto my-8 p-4 max-w-4xl"> 
+
+            <h1 class="text-2xl font-bold text-center block mb-8"> 
+                🐒 Charles Darwin (1809-1882)  <br />Teoria de la evolución
+            </h1>
+    
+        
+        <Image 
+            src={imagen} 
+            alt="Ilustracion de Charles Darwin" 
+            class="mx-auto w-full max-w-sm rounded-lg shadow-lg mb-8"
+            format="webp"
+            quality={80}
+        />
+
+        <p class="mb-6 text-base">
+            Charles Darwin (1809-1882) fue un naturalista británico reconocido por desarrollar la teoría de la evolución por selección natural. 
+            Su obra "El origen de las especies" revolucionó la biología al proporcionar evidencia científica de cómo las especies cambian con el tiempo.
+        </p>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🔍 Principales Descubrimientos</h2> 
+            <ul class="space-y-3 text-base">
+                <li>1️⃣ Viaje en el Beagle (1831-1836) – Durante su expedición alrededor del mundo, Darwin recolectó evidencia que respaldaría su teoría.</li>
+                <li>2️⃣ Selección Natural – Propuso que las especies evolucionan a través de pequeñas variaciones heredables que mejoran su supervivencia.</li>
+                <li>3️⃣ "El origen de las especies" (1859) – Publicó su obra más influyente, fundamentando la evolución en observaciones científicas.</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🌱 Impacto en la Ciencia</h2>
+            <p class="text-base">
+                Su teoría cambió la comprensión de la biodiversidad y el desarrollo de las especies. 
+                Su trabajo influyó en disciplinas como la biología, la genética y la paleontología.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🚢 El Viaje del Beagle</h2>
+            <p class="text-base"> 
+                Darwin recorrió el mundo en el HMS Beagle, recopilando datos en lugares como las Islas Galápagos, donde observó diferencias entre 
+                especies de pinzones que lo llevaron a formular su teoría evolutiva.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🌟 Legado</h2>
+            <ul class="space-y-3 text-base">
+                <li>Sus ideas siguen siendo fundamentales en la biología moderna.</li>
+                <li>El Día de Darwin (12 de febrero) se celebra en honor a su contribución a la ciencia.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p class="text-sm"> 
+            © 2025 Este es un proyecto educativo usando librerías de uso público.
+        </p>
+    </footer>
+</Layout>

@@ -1,50 +1,82 @@
 ---
+import { Image } from 'astro:assets';
+import imagen from '../Imagenes/Marie.jpg';
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<header class="bg-green-700 text-white py-4 text-center">
-		<h1 class="text-4xl font-bold">WikiAnimal</h1>
-	</header>
+    <header class="bg-green-700 text-white py-4 text-center">
+        <h1 class="text-3xl font-bold">WikiAnimal</h1>
+    </header>
 
-	<nav class="bg-green-600 p-4 text-white">
-		<ul class="flex justify-center gap-4">
-			<li><a href="/" class="hover:underline">Inicio</a></li>
-			<li><a href="/Prehistoria" class="hover:underline">Animales Prehistoricos</a></li>
-            <li><a href="/Cientificos" class="hover:underline">Cientificos</a></li>
-		</ul>
-	</nav>
-
-	<main class=" flex-grow text-3x1 mx-auto my-8 p-4">
-        <a href="mary-anning.html">
-            <h1 class="text-3xl font-bold justift-left text-center">🦖 Mary Anning (1799-1847) <br />Descubridora de fósiles clave</h1>
-        </a>
-        <img src="public/Imagenes/Marie.jpg" alt="Descripción de la imagen" class="mx-auto w-full max-w-sm rounded-lg shadow-lg">
-
-        
-        <p>Mary Anning (1799-1847) fue una paleontóloga y coleccionista de fósiles británica que hizo importantes descubrimientos en la costa de Lyme Regis, en Inglaterra, durante el siglo XIX. Aunque su trabajo no fue completamente reconocido en vida debido a su género y falta de educación formal, sus hallazgos contribuyeron significativamente al desarrollo de la paleontología y la comprensión de la evolución.</p>
-        <ul>
-            <h2 class="font-semibold text-2x1">🔍 Principales Descubrimientos</h2>
-            <li>1️⃣ Ictiosaurio (1811) – A los 12 años, Mary y su hermano encontraron el primer esqueleto completo de ictiosaurio, un reptil marino prehistórico.</li>
-            <li>2️⃣ Plesiosaurio (1823) – Descubrió el primer fósil de plesiosaurio bien conservado, sorprendiendo a la comunidad científica.</li>
-            <li>3️⃣ Pterosaurio (1828) – Encontró el primer fósil de pterosaurio (reptil volador) en el Reino Unido.</li>
+    <nav class="bg-green-600 p-4 text-white">
+        <ul class="flex justify-center gap-4">
+            <li><a href="/" class="hover:underline text-lg hover:text-black transition-colors">Inicio</a></li> 
+            <li><a href="/Prehistoria" class="hover:underline text-lg hover:text-black transition-colors">Animales Prehistoricos</a></li>
+            <li><a href="/Cientificos" class="hover:underline text-lg hover:text-black transition-colors">Cientificos</a></li>
         </ul>
-        <h2 class="font-semibold text-2x1">🦴 Impacto en la Ciencia</h2>
-        <p>Ayudó a demostrar que algunas especies se habían extinguido, apoyando la teoría de la evolución.
-                Sus hallazgos fueron estudiados por científicos de la época, aunque rara vez se le dio crédito.
-                Influyó en la geología y la interpretación de los fósiles en los estratos terrestres.</p>
+    </nav>
 
-        <ul>
-            <h2 class="font-semibold text-2x1">🌊 El Desafío de Ser Mujer en la Ciencia</h2>
-            <li>A pesar de su talento y experiencia, fue ignorada por la Sociedad Geológica de Londres porque no aceptaban mujeres. Sin embargo, científicos como Georges Cuvier y Richard Owen (quien acuñó el término "dinosaurio") estudiaron sus hallazgos.</li>    
-            <h2 class="font-semibold text-2x1">🌟 Legado</h2>
-            <li>Hoy es reconocida como una pionera en la paleontología. Su historia inspiró la frase:
-            "She sells seashells by the seashore" 🐚, ya que vendía fósiles en la costa para ganarse la vida.</li>
-            <li>En 2010, fue nombrada por la Royal Society como una de las mujeres más influyentes en la historia de la ciencia.</li>
-        </ul>       
-	</main>
+    <main class="flex-grow text-xl mx-auto my-8 p-4 max-w-4xl"> 
+            <h1 class="text-2xl font-bold text-center block mb-8"> 
+                🦖 Mary Anning (1799-1847) <br />Descubridora de fósiles clave
+            </h1>
+        
+        <Image 
+            src={imagen} 
+            alt="Ilustracion de Mary Anning" 
+            class="mx-auto w-full max-w-sm rounded-lg shadow-lg mb-8"
+            format="webp"
+            quality={80}
+        />
 
-	<footer class="bg-gray-800 text-white text-center py-4">
-		<p>© 2025 Este es un proyecto educativo usando librerías de uso público.</p>
-	</footer>
+        <p class="mb-6 text-base">
+            Mary Anning (1799-1847) fue una paleontóloga y coleccionista de fósiles británica que hizo importantes 
+            descubrimientos en la costa de Lyme Regis, en Inglaterra, durante el siglo XIX. Aunque su trabajo no 
+            fue completamente reconocido en vida debido a su género y falta de educación formal, sus hallazgos 
+            contribuyeron significativamente al desarrollo de la paleontología y la comprensión de la evolución.
+        </p>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🔍 Principales Descubrimientos</h2> 
+            <ul class="space-y-3 text-base">
+                <li>1️⃣ Ictiosaurio (1811) – A los 12 años, Mary y su hermano encontraron el primer esqueleto completo de ictiosaurio, un reptil marino prehistórico.</li>
+                <li>2️⃣ Plesiosaurio (1823) – Descubrió el primer fósil de plesiosaurio bien conservado, sorprendiendo a la comunidad científica.</li>
+                <li>3️⃣ Pterosaurio (1828) – Encontró el primer fósil de pterosaurio (reptil volador) en el Reino Unido.</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🦴 Impacto en la Ciencia</h2>
+            <p class="text-base">
+                Ayudó a demostrar que algunas especies se habían extinguido, apoyando la teoría de la evolución. 
+                Sus hallazgos fueron estudiados por científicos de la época, aunque rara vez se le dio crédito. 
+                Influyó en la geología y la interpretación de los fósiles en los estratos terrestres.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🌊 El Desafío de Ser Mujer en la Ciencia</h2>
+            <p class="text-base"> 
+                A pesar de su talento y experiencia, fue ignorada por la Sociedad Geológica de Londres porque 
+                no aceptaban mujeres. Sin embargo, científicos como Georges Cuvier y Richard Owen (quien acuñó 
+                el término "dinosaurio") estudiaron sus hallazgos.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🌟 Legado</h2>
+            <ul class="space-y-3 text-base">
+                <li>Hoy es reconocida como una pionera en la paleontología. Su historia inspiró la frase: 
+                    "She sells seashells by the seashore" 🐚, ya que vendía fósiles en la costa para ganarse la vida.</li>
+                <li>En 2010, fue nombrada por la Royal Society como una de las mujeres más influyentes en la historia de la ciencia.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p class="text-sm"> 
+            © 2025 Este es un proyecto educativo usando librerías de uso público.
+        </p>
+    </footer>
 </Layout>

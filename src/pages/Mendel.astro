@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import imagen from '../Imagenes/Mendel.jpg';
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <header class="bg-green-700 text-white py-4 text-center">
+        <h1 class="text-3xl font-bold">WikiAnimal</h1>
+    </header>
+
+    <nav class="bg-green-600 p-4 text-white">
+        <ul class="flex justify-center gap-4">
+            <li><a href="/" class="hover:underline text-lg hover:text-black transition-colors">Inicio</a></li> 
+            <li><a href="/Prehistoria" class="hover:underline text-lg hover:text-black transition-colors">Animales Prehistoricos</a></li>
+            <li><a href="/Cientificos" class="hover:underline text-lg hover:text-black transition-colors">Cientificos</a></li>
+        </ul>
+    </nav>
+    <main class="flex-grow text-xl mx-auto my-8 p-4 max-w-4xl"> 
+
+            <h1 class="text-2xl font-bold text-center block mb-8"> 
+                🧬 Gregor Mendel (1822-1884)<br/>Padre de la Genética
+            </h1>
+        <Image 
+            src={imagen} 
+            alt="Ilustracion de George Mendel" 
+            class="mx-auto w-full max-w-sm rounded-lg shadow-lg mb-8"
+            format="webp"
+            quality={80}
+        />
+
+        <p class="mb-6 text-base">
+            Gregor Mendel fue un monje y científico austríaco cuyas investigaciones sobre la herencia en plantas de guisantes sentaron las bases de la genética moderna. 
+            Sus experimentos revelaron los principios de la herencia, conocidos hoy como las Leyes de Mendel.
+        </p>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🔍 Principales Descubrimientos</h2> 
+            <ul class="space-y-3 text-base">
+                <li>1️⃣ Experimentos con guisantes – Estudió cómo los rasgos se heredan a través de generaciones.</li>
+                <li>2️⃣ Leyes de Mendel – Descubrió los principios de la dominancia, segregación y distribución independiente.</li>
+                <li>3️⃣ Publicación en 1866 – Su trabajo "Experimentos sobre hibridación de plantas" fue clave para la genética.</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🌱 Impacto en la Ciencia</h2>
+            <p class="text-base">
+                Sus descubrimientos sentaron las bases para la genética moderna y han influenciado campos como la biotecnología y la biomedicina.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">📜 Reconocimiento Póstumo</h2>
+            <p class="text-base"> 
+                Aunque sus estudios fueron ignorados en vida, a principios del siglo XX sus hallazgos fueron redescubiertos, 
+                consolidando su papel como el "Padre de la Genética".
+            </p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p class="text-sm"> 
+            © 2025 Este es un proyecto educativo usando librerías de uso público.
+        </p>
+    </footer>
+</Layout>
