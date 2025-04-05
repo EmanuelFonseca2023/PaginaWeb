@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import imagen from '../Imagenes/Hutton.jpg';
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <header class="bg-green-700 text-white py-4 text-center">
+        <h1 class="text-3xl font-bold">WikiAnimal</h1>
+    </header>
+
+    <nav class="bg-green-600 p-4 text-white">
+        <ul class="flex justify-center gap-4">
+            <li><a href="/" class="hover:underline text-lg hover:text-black transition-colors">Inicio</a></li> 
+            <li><a href="/Prehistoria" class="hover:underline text-lg hover:text-black transition-colors">Animales Prehistoricos</a></li>
+            <li><a href="/Cientificos" class="hover:underline text-lg hover:text-black transition-colors">Cientificos</a></li>
+        </ul>
+    </nav>
+    <main class="flex-grow text-xl mx-auto my-8 p-4 max-w-4xl"> 
+
+            <h1 class="text-2xl font-bold text-center block mb-8"> 
+                🌋James Hutton (1726-1797) <br/>Padre de la Geología Moderna
+            </h1>
+        <Image 
+            src={imagen} 
+            alt="Ilustracion de James Hutton" 
+            class="mx-auto w-full max-w-sm rounded-lg shadow-lg mb-8"
+            format="webp"
+            quality={80}
+        />
+        <p class="mb-6 text-base">
+            James Hutton fue un geólogo escocés cuya obra revolucionó la comprensión del tiempo geológico y el origen de la Tierra. Conocido como el "Padre de la Geología Moderna", sus ideas desafiaron las creencias tradicionales y sentaron las bases para el estudio científico de nuestro planeta.
+        </p>
+        
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🔍 Principales Descubrimientos</h2>
+            <ul class="space-y-3 text-base">
+                <li>1️⃣ Teoría del Uniformitarianismo – Propuso que los procesos geológicos observados en la actualidad han operado de manera similar a lo largo de la historia de la Tierra.</li>
+                <li>2️⃣ Concepto de "Deep Time" – Introdujo la idea de que la Tierra es mucho más antigua de lo que se pensaba, abriendo la puerta al estudio del tiempo geológico profundo.</li>
+                <li>3️⃣ Ciclo de las Rocas – Describió el continuo proceso de transformación de las rocas a través de la erosión, sedimentación y metamorfismo.</li>
+            </ul>
+        </section>
+        
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">🌱 Impacto en la Ciencia</h2>
+            <p class="text-base">
+                Las ideas de Hutton sentaron las bases para la geología moderna, influyendo en campos como la paleontología y la geocronología. Su enfoque en procesos graduales y uniformes permitió a la comunidad científica comprender mejor la evolución de la Tierra y sus dinámicas internas.
+            </p>
+        </section>
+        
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">📜 Legado y Reconocimiento</h2>
+            <p class="text-base">
+                Aunque en su época sus teorías fueron objeto de debate y controversia, hoy en día Hutton es reconocido como uno de los pioneros en la ciencia de la Tierra. Su legado perdura en la forma en que entendemos y estudiamos los procesos geológicos que han moldeado nuestro planeta a lo largo de millones de años.
+            </p>
+        </section>
+        
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p class="text-sm"> 
+            © 2025 Este es un proyecto educativo usando librerías de uso público.
+        </p>
+    </footer>
+</Layout>
