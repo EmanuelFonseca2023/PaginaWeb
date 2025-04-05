@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import imagen from '../Imagenes/EdadesGeologicas.jpg';
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<header class="bg-green-700 text-white py-4 text-center">
+		<h1 class="text-4xl font-bold">WikiAnimal</h1>
+	</header>
+
+	<nav class="bg-green-600 p-4 text-white">
+		<ul class="flex justify-center gap-4">
+			<li><a href="/" class="hover:underline">Inicio</a></li>
+			<li><a href="/Cientificos" class="hover:underline">Cientificos</a></li>
+		</ul>
+	</nav>
+    <main class="flex-grow text-xl mx-auto my-8 p-4 max-w-4xl">
+        <h1 class="text-2xl font-bold text-center block mb-8"> 
+            Edades geologicas de la Tierra 
+        </h1>
+
+        <Image 
+            src={imagen} 
+            alt="Ilustracion de la edades geologicas de la tierra" 
+            class="mx-auto w-full max-w-sm rounded-lg shadow-lg mb-8"
+            format="webp"
+            quality={80}
+        />
+        <section class="mb-8">
+            <h2 class="font-semibold text-xl mb-4">Precámbrico (4,600 - 541 millones de años)</h2> 
+            <h3>Subdivisiones</h3>
+            <li>
+                <ul>Hadeico (4,600 - 4,000 MA): Formación de la Tierra, océanos de magma.</ul>
+                <ul>Arcaico (4,000 - 2,500 MA): Primeras rocas continentales.</ul>
+                <ul>Proterozoico (2,500 - 541 MA): Oxigenación atmosférica.</ul>
+            </li>
+
+        </section>
+    </main>
+	
+
+	<footer class="bg-gray-800 text-white text-center py-4">
+		<p>© 2025 Este es un proyecto educativo usando librerías de uso público.</p>
+	</footer>
+</Layout>
